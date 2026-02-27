@@ -22,7 +22,6 @@ const CONFIG_PERSONAL = {
         'Fullstack Engineer',
         'Problem Solver',
         'AI Integration Dev',
-        'GDG Core Member',
     ],
 };
 
