@@ -324,7 +324,7 @@ function initTilt(scope) {
 function initTyped() {
   const el = document.getElementById('typedRole');
   if (!el) return;
-  const roles = CONFIG_PERSONAL.roles || ['AI/ML Engineer'];
+  const roles = CONFIG_PERSONAL.roles || ['Software Developer'];
   let ri = 0, ci = 0, del = false;
 
   function tick() {
