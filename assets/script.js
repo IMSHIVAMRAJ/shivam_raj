@@ -598,7 +598,7 @@ async function fetchRepos() {
     if (raw) { const { ts, data } = JSON.parse(raw); if (Date.now() - ts < GH_TTL) return data; }
   } catch (_) { }
 
-  const user = CONFIG_GITHUB_USER || 'raj-neelam';
+  const user = CONFIG_GITHUB_USER || 'shivam-raj';
   const res = await fetch(`https://api.github.com/users/${user}/repos?per_page=100&sort=updated`);
   if (!res.ok) throw new Error(`GH ${res.status}`);
   const data = await res.json();
@@ -609,6 +609,23 @@ async function fetchRepos() {
 async function renderRepos() {
   const grid = document.getElementById('reposGrid');
   if (!grid) return;
+
+  // Check if we should render certifications instead
+  if (typeof CONFIG_CERTIFICATIONS !== 'undefined' && CONFIG_CERTIFICATIONS.length > 0) {
+    grid.innerHTML = CONFIG_CERTIFICATIONS.map(cert => `
+      <article class="certification-card">
+        <div class="certification-image">
+          <img src="./assets/images/${cert.image}" alt="${cert.title}">
+          <span class="cert-badge">${cert.issuer}</span>
+        </div>
+        <div class="certification-body">
+          <h3 class="cert-title">${cert.title}</h3>
+          <p class="cert-desc">${cert.description || ''}</p>
+         
+        </div>
+      </article>`).join('');
+    return;
+  }
 
   grid.innerHTML = `
     <div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-2);">
@@ -633,7 +650,7 @@ async function renderRepos() {
         </div>
       </article>`).join('');
   } catch (_) {
-    const u = CONFIG_GITHUB_USER || 'raj-neelam';
+    const u = CONFIG_GITHUB_USER || 'shivam-raj';
     grid.innerHTML = `
       <div style="text-align:center;padding:3rem;color:var(--text-2);">
         <i class="fas fa-triangle-exclamation" style="font-size:1.5rem;color:#ff6b6b;"></i>
@@ -653,8 +670,8 @@ function buildContact() {
     const rows = [
       { icon: 'fas fa-envelope', val: CONFIG_PERSONAL.email, href: `mailto:${CONFIG_PERSONAL.email}`, lbl: 'Email' },
       { icon: 'fas fa-globe', val: CONFIG_PERSONAL.website, href: CONFIG_PERSONAL.website, lbl: 'Website' },
-      { icon: 'fab fa-linkedin-in', val: 'raj-neelam', href: 'https://www.linkedin.com/in/raj-neelam-80666920b/', lbl: 'LinkedIn' },
-      { icon: 'fab fa-x-twitter', val: '@RajNGaurav', href: 'https://twitter.com/RajNGaurav', lbl: 'Twitter' },
+      { icon: 'fab fa-linkedin-in', val: 'shivam-raj', href: 'https://www.linkedin.com/in/raj-neelam-80666920b/', lbl: 'LinkedIn' },
+
     ];
     card.innerHTML = rows.map(r =>
       `<a href="${r.href}" target="_blank" rel="noopener" class="contact-info-row">
@@ -684,7 +701,7 @@ function buildContact() {
       const firstName = name.split(' ')[0];
       const subject = encodeURIComponent(`Connection - ${firstName}`);
       const body = encodeURIComponent(
-        `Hi Raj,\n\n${message}\n\n---\nFrom: ${name}\nEmail: ${email}`
+        `Hi Shivam ,\n\n${message}\n\n---\nFrom: ${name}\nEmail: ${email}`
       );
       const to = encodeURIComponent(CONFIG_PERSONAL.email);
 
@@ -710,6 +727,25 @@ async function renderReposMobile() {
   const grid = document.getElementById('reposGridMobile');
   if (!grid) return;
 
+  // Check if we should render certifications instead
+  if (typeof CONFIG_CERTIFICATIONS !== 'undefined' && CONFIG_CERTIFICATIONS.length > 0) {
+    grid.innerHTML = CONFIG_CERTIFICATIONS.map(cert => `
+      <article class="certification-card">
+        <div class="certification-image">
+          <img src="./assets/images/${cert.image}" alt="${cert.title}">
+          <span class="cert-badge">${cert.issuer}</span>
+        </div>
+        <div class="certification-body">
+          <h3 class="cert-title">${cert.title}</h3>
+          <p class="cert-desc">${cert.description || ''}</p>
+          <div class="cert-actions">
+            ${cert.url ? `<a href="${cert.url}" target="_blank" rel="noopener" class="cert-link-btn">View More <i class="fas fa-arrow-right"></i></a>` : ''}
+          </div>
+        </div>
+      </article>`).join('');
+    return;
+  }
+
   grid.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text-2);">
     <i class="fas fa-circle-notch fa-spin" style="font-size:1.5rem;color:var(--accent);"></i>
     <p style="margin-top:1rem;font-size:.88rem;">Loading repositories…</p>
@@ -732,7 +768,7 @@ async function renderReposMobile() {
         </div>
       </article>`).join('');
   } catch (_) {
-    const u = CONFIG_GITHUB_USER || 'raj-neelam';
+    const u = CONFIG_GITHUB_USER || 'shivam-raj';
     grid.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--text-2);">
       <i class="fas fa-triangle-exclamation" style="font-size:1.5rem;color:#ff6b6b;"></i>
       <p style="margin-top:1rem;">Could not load repos.

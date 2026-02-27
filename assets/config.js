@@ -30,7 +30,6 @@ const CONFIG_PERSONAL = {
 const CONFIG_SOCIALS = [
     { icon: 'fab fa-github', url: 'https://github.com/IMSHIVAMRAJ', label: 'GitHub' },
     { icon: 'fab fa-linkedin-in', url: 'https://www.linkedin.com/in/shivam-raj-ojha-1680b5284/', label: 'LinkedIn' },
-    { icon: 'fab fa-x-twitter', url: 'https://twitter.com/IMSHIVAMRAJ', label: 'Twitter' },
     { icon: 'fas fa-code', url: 'https://leetcode.com/u/SHIVAM_RAJ_OJHA/', label: 'LeetCode' },
     { icon: 'fas fa-globe', url: 'https://shivamraj.vercel.app/', label: 'Website' },
 ];
@@ -40,7 +39,7 @@ const CONFIG_NAV = [
     { id: 'about', label: 'About', icon: 'fas fa-user' },
     { id: 'resume', label: 'Resume', icon: 'fas fa-file-lines' },
     { id: 'projects', label: 'Projects', icon: 'fas fa-folder-open' },
-    { id: 'mywork', label: 'My Work', icon: 'fab fa-github' },
+    { id: 'mywork', label: 'Certifications', icon: 'fab fa-github' },
     { id: 'contact', label: 'Contact', icon: 'fas fa-paper-plane' },
 ];
 
@@ -49,7 +48,7 @@ const CONFIG_STATS = [
     { value: 500, suffix: '+', label: 'DSA Problems Solved' },
     { value: 3, suffix: '+', label: 'Production Projects' },
     { value: 2, suffix: '+', label: 'Years Experience' },
-    { value: 8, label: '.05 CGPA', label: 'Academic Excellence' },
+    { value: 600, suffix: '+', label: 'Student Taught' },
 ];
 
 /* ── Services / What I Do ── */
@@ -72,6 +71,16 @@ const CONFIG_EDUCATION = [
         date: '2023 — 2027',
         title: 'Quantum University, Roorkee',
         body: 'B.Tech (Computer Science) — CGPA: 8.05',
+    },
+    {
+        date: '2021 — 2022',
+        title: 'Cambridge Senior Secondary School',
+        body: 'Intermediate — Science Stream',
+    },
+    {
+        date: '2020',
+        title: 'St. Paul School',
+        body: 'Matriculation',
     },
 ];
 
@@ -164,30 +173,113 @@ const CONFIG_TECH_STACK = [
 const CONFIG_PROJECTS = [
     {
         name: 'Park-Intel — Intelligent GeoSpatial Parking Automation Platform',
-        cover: null,
+        cover: 'park_intel.png',
         icon: 'fas fa-parking',
         category: 'Fullstack',
         github: 'https://github.com/IMSHIVAMRAJ/park-intel',
-        demo: null,
+        demo: 'https://park-intel.vercel.app/',
         description: 'Real-time smart parking backend with transactional slot management, OCR vehicle detection, Redis GeoSpatial indexing, and AI-powered occupancy prediction with intelligent billing.',
     },
     {
         name: 'WeCare — AI-Powered Care Service Platform',
-        cover: null,
+        cover: 'wecare.png',
         icon: 'fas fa-heart',
         category: 'Fullstack',
         github: 'https://github.com/IMSHIVAMRAJ/wecare',
-        demo: null,
+        demo: 'https://we-caree.vercel.app/',
         description: 'Full-stack care service platform for seniors and differently-abled users with role-based dashboards, LangChain AI recommendations, Razorpay payments, and dynamic CRUD architecture.',
     },
     {
         name: 'HackVerse — Collaborative Hackathon Ecosystem',
-        cover: null,
+        cover: 'hackverse.png',
         icon: 'fas fa-rocket',
         category: 'Fullstack',
         github: 'https://github.com/IMSHIVAMRAJ/hackverse',
-        demo: null,
+        demo: 'https://hack-verse-sr.vercel.app/',
         description: 'Real-time hackathon collaboration platform with team discovery, OpenAI-powered idea validation, auto team-matching, expert mentorship scheduling, and Socket.io messaging.',
+    },
+     {
+        name: 'FullStack Chat-App',
+        cover: 'chat.jpg',
+        icon: 'fas fa-rocket',
+        category: 'Fullstack',
+        github: 'https://github.com/IMSHIVAMRAJ/fullstack_chat_app',
+        demo: null,
+        description: 'Real-time fullstack chat application with user authentication, message persistence, and WebSocket-based real-time communication.',
+    }, {
+        name: 'Jharkhand Tourism ',
+        cover: 'jharkhand.jpg',
+        icon: 'fas fa-rocket',
+        category: 'Mernstack',
+        github: 'https://github.com/IMSHIVAMRAJ/Jharkhand_Tourism',
+        demo: null,
+        description: 'Comprehensive tourism platform for Jharkhand showcasing destinations, attractions, and travel packages. Built as part of the Smart India Hackathon 2024 project.',
+    }, {
+        name: 'She-Help',
+        cover: 'she.jpg',
+        icon: 'fas fa-rocket',
+        category: 'Mernstack',
+        github: 'https://github.com/IMSHIVAMRAJ/SheHelp',
+        demo: null,
+        description: 'Website to help female from problems such as pcod , pregancy and mental health',
+    }, {
+        name: 'IPDIS',
+        cover: 'ipdis.jpg',
+        icon: 'fas fa-rocket',
+        category: 'Mernstack',
+        github: 'https://github.com/IMSHIVAMRAJ/IPSDIS',
+        demo: null,
+        description: 'A pathological society project build as part of freelance work to help pathologist to share their research and knowledge',
+    }, {
+        name: 'GIGA-CHAT',
+        cover: 'chat.jpg',
+        icon: 'fas fa-rocket',
+        category: 'React',
+        github: 'https://github.com/IMSHIVAMRAJ/GIGA-CHAT',
+        demo: null,
+        description: 'A chat application build using gemini api ',
+    },
+    {
+        name: 'CryptoPlace',
+        cover: 'crypto.png',
+        icon: 'fas fa-rocket',
+        category: 'React',
+        github: 'https://github.com/IMSHIVAMRAJ/Cryptoplace',
+        demo: null,
+        description: 'A crypto marketplace platform built with React and external api, featuring real-time price tracking',
+    },
+];
+
+/* ────────────────────────────────────────────────────
+   CERTIFICATIONS
+   Each certification:
+     title       — certification name
+     issuer      — issuing organization
+     image       — image filename inside assets/images/
+     url         — link to certification or issuer (optional)
+     description — short description shown on the card
+   ──────────────────────────────────────────────────── */
+const CONFIG_CERTIFICATIONS = [
+    {
+        title: 'Postman Student Expert',
+        issuer: 'Postman',
+        image: 'postman.png',
+        url: 'https://www.postman.com/',
+        description: 'Mastered API development and testing with Postman. Demonstrated expertise in REST API design, testing, and automation.',
+    },
+    {
+        title: 'Generative AI Study Jams',
+        issuer: 'Google',
+        image: 'genai.png',
+        url: 'https://www.google.com/',
+        description: 'Completed comprehensive study program on Generative AI fundamentals, architecture, and practical applications.',
+    },
+    {
+        title: 'Solution Challenge',
+        issuer: 'Google',
+        image: 'solution.png',
+        url: 'https://www.google.com/',
+        description: 'Developed innovative solutions to real-world problems using Google technologies and SDGs framework.',
     },
 ];
 

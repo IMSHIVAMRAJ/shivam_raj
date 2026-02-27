@@ -1571,6 +1571,134 @@ body {
 }
 
 /* ════════════════════════════════════════════════
+   CERTIFICATIONS
+   ════════════════════════════════════════════════ */
+.certification-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--tr), box-shadow var(--tr), transform var(--tr);
+  cursor: pointer;
+}
+
+.certification-card:hover {
+  border-color: var(--border-h);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+}
+
+/* Image / thumb area */
+.certification-image {
+  position: relative;
+  width: 100%;
+  padding-top: 54%;
+  background: var(--bg-3);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.certification-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform .55s ease;
+}
+
+.certification-card:hover .certification-image img {
+  transform: scale(1.07);
+}
+
+.cert-badge {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+  font-size: .62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  background: rgba(7, 11, 15, .72);
+  border: 1px solid rgba(var(--accent-rgb, 168, 85, 247), .3);
+  padding: .18rem .55rem;
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
+}
+
+[data-theme="light"] .cert-badge {
+  color: var(--accent);
+  background: rgba(255, 255, 255, .8);
+  border-color: rgba(99, 102, 241, .3);
+}
+
+/* Content below image */
+.certification-body {
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cert-title {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: .25rem;
+  letter-spacing: -.01em;
+}
+
+.cert-issuer {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: .5rem;
+}
+
+.cert-desc {
+  font-size: .78rem;
+  color: var(--text-2);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: .9rem;
+}
+
+/* Action buttons row */
+.cert-actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.cert-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .75rem;
+  font-weight: 600;
+  border-radius: 9px;
+  padding: .38rem .85rem;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  background: var(--glass);
+  transition: background var(--tr), color var(--tr), border-color var(--tr), transform var(--tr-b);
+  text-decoration: none;
+}
+
+.cert-link-btn:hover {
+  background: var(--glass-h);
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb, 168, 85, 247), .25);
+  transform: translateY(-2px);
+}
+
+/* ════════════════════════════════════════════════
    CONTACT
    ════════════════════════════════════════════════ */
 .contact-layout {
