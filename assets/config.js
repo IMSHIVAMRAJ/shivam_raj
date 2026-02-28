@@ -231,7 +231,7 @@ const CONFIG_PROJECTS = [
         description: 'A pathological society project build as part of freelance work to help pathologist to share their research and knowledge',
     }, {
         name: 'GIGA-CHAT',
-        cover: 'chat.jpg',
+        cover: 'giga.png',
         icon: 'fas fa-rocket',
         category: 'React',
         github: 'https://github.com/IMSHIVAMRAJ/GIGA-CHAT',

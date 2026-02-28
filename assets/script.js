@@ -670,7 +670,7 @@ function buildContact() {
     const rows = [
       { icon: 'fas fa-envelope', val: CONFIG_PERSONAL.email, href: `mailto:${CONFIG_PERSONAL.email}`, lbl: 'Email' },
       { icon: 'fas fa-globe', val: CONFIG_PERSONAL.website, href: CONFIG_PERSONAL.website, lbl: 'Website' },
-      { icon: 'fab fa-linkedin-in', val: 'shivam-raj', href: 'https://www.linkedin.com/in/raj-neelam-80666920b/', lbl: 'LinkedIn' },
+      { icon: 'fab fa-linkedin-in', val: 'shivam-raj', href: 'https://www.linkedin.com/in/shivam-raj-ojha-1680b5284/', lbl: 'LinkedIn' },
 
     ];
     card.innerHTML = rows.map(r =>
