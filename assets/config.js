@@ -11,7 +11,7 @@ const CONFIG_PERSONAL = {
     name: 'Shivam Raj',
     tagline: 'Fullstack Developer',          // shown under name
     location: 'Roorkee, India',
-    birthday: 'July 14, 2004',
+    birthday: 'June 29, 2004',
     email: 'sraj2004bxr@gmail.com',
     phone: '+91 9955399037',
     website: 'https://shivamraj.vercel.app/',
@@ -69,7 +69,7 @@ const CONFIG_EDUCATION = [
     {
         date: '2023 — 2027',
         title: 'Quantum University, Roorkee',
-        body: 'B.Tech (Computer Science) — CGPA: 8.05',
+        body: 'B.Tech (Computer Science) — CGPA: 8.21',
     },
     {
         date: '2021 — 2022',
